@@ -29,7 +29,6 @@ public class Employee {
 		} else {
 			this.salary = salary;
 		}
-
 	}
 
 	/***
@@ -39,18 +38,16 @@ public class Employee {
 	 * @param salary
 	 */
 	public Employee(String name, double salary) {
-		super();
-		this.name = name;
-		this.salary = salary;
+		setName(name);
+		setSalary(salary);
 	}
 
 	/***
-	 * This is the toString method
+	 * This is the override of toString method
 	 */
 	@Override
 	public String toString() {
-		return String.format("%nName: %s \t"
-				+ "Salary: $%,.2f", 
-				 name, salary);
+		return String.format("%nName: %s \t" + "Salary: $%,.2f", name, salary);
 	}
+	
 } // end class

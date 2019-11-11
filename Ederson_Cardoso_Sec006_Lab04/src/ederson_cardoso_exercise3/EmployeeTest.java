@@ -7,13 +7,15 @@ import java.util.LinkedList;
 public class EmployeeTest {
 
 	public static void main(String[] args) {
-		
+		// instantiate 3 objects of Employee(Name, Salary)
 		Employee emp1 = new Employee("John", 3000.00);
 		Employee emp2 = new Employee("Susan", 1500.00);
 		Employee emp3 = new Employee("Bob", 2000.00);
 
+		// create an array of objects
 		Employee[] employees = { emp1, emp2, emp3 };
 
+		// create a linked list with an array
 		LinkedList<Employee> list = new LinkedList<>(Arrays.asList(employees));
 
 		// print unsorted list

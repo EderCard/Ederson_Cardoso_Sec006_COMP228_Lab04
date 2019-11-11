@@ -32,7 +32,7 @@ public class SetTest {
 			try {
 				option = scanner.nextInt();
 			} catch (java.util.InputMismatchException e) {
-				System.out.printf("%n Invalid Option.");
+				System.out.println(" Invalid Option.");
 				option = 0;
 			}
 
@@ -53,7 +53,7 @@ public class SetTest {
 				System.out.printf("%n***Program terminated***");
 				break;
 			default:
-				System.out.println("invalid");
+				System.out.println(" Invalid number: [0 - 4]");
 			} // end switch
 		} // end while
 
@@ -69,7 +69,7 @@ public class SetTest {
 	private static void printList(Collection<String> values) {
 		System.out.printf("%n Initial list: %s%n", values);
 		System.out.println();
-	}
+	} // end method printList
 
 	/**
 	 * This method prints a non duplicated values form a list collection
@@ -87,7 +87,7 @@ public class SetTest {
 
 		System.out.println();
 		System.out.println();
-	}
+	} // end method printNonDuplicates
 
 	/**
 	 * This method adds a value to a list collection
@@ -100,7 +100,7 @@ public class SetTest {
 		values.add(name);
 		System.out.printf("%n New list is: %s%n", values);
 		System.out.println();
-	}
+	} // end method addName
 
 	/**
 	 * This method search for a value in a list collection
@@ -120,6 +120,6 @@ public class SetTest {
 			System.out.printf("%n%s not found.%n", name);
 		}
 		System.out.println();
-	}
+	} // end method searchName
 
 } // end class
