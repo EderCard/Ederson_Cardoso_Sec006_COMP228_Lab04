@@ -115,7 +115,7 @@ public class SetTest {
 		Collections.sort(list);
 		int position = Collections.binarySearch(list, name);
 		if (position >= 0) {
-			System.out.printf("%s is in the list.%n", name);
+			System.out.printf("%n%s is in the list.%n", name);
 		} else {
 			System.out.printf("%n%s not found.%n", name);
 		}
