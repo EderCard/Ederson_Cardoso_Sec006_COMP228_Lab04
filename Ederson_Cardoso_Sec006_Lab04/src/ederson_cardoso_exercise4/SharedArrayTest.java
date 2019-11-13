@@ -1,6 +1,5 @@
 package ederson_cardoso_exercise4;
 
-import java.security.SecureRandom;
 import java.util.concurrent.ExecutorService;
 // Fig. 23.7: SharedArrayTest.java
 import java.util.concurrent.Executors;
@@ -13,10 +12,9 @@ public class SharedArrayTest {
 
 		
 		// create two tasks to write to the shared SimpleArray
-		ArrayWriter writer1 = new ArrayWriter(getRandomIntInRange(0,10), sharedSimpleArray); 
-		ArrayWriter writer2 = new ArrayWriter(getRandomIntInRange(11,20), sharedSimpleArray);
-		ArrayWriter writer3 = new ArrayWriter(getRandomIntInRange(21,30), sharedSimpleArray);
-
+		ArrayWriter writer1 = new ArrayWriter(0, sharedSimpleArray); 
+		ArrayWriter writer2 = new ArrayWriter(11, sharedSimpleArray);
+		ArrayWriter writer3 = new ArrayWriter(21, sharedSimpleArray);
 
 		// execute the tasks with an ExecutorService
 		ExecutorService executorService = Executors.newCachedThreadPool();
@@ -40,22 +38,6 @@ public class SharedArrayTest {
 			ex.printStackTrace();
 		}
 	}
-	/**
-	 * This method will generate a random integer in a range between min (inclusive) and max (inclusive).
-	 * @param min
-	 * @param max
-	 * @return
-	 */
-	private static int getRandomIntInRange(int min, int max) {
-		// validate max > min
-		if (min >= max) {
-			throw new IllegalArgumentException("Max must be greater than Min");
-		}
-
-		// create random object
-		SecureRandom r = new SecureRandom();
-		return r.nextInt((max - min) + 1) + min;
-      
-	} // end method getRandomIntInRange
+	
 	
 } // end class
