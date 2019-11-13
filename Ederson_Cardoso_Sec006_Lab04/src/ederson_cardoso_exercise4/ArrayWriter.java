@@ -1,9 +1,5 @@
 package ederson_cardoso_exercise4;
 
-// Fig. 23.6: ArrayWriter.java
-// Adds integers to an array shared with other Runnables
-import java.lang.Runnable;
-
 public class ArrayWriter implements Runnable {
 	private final SimpleArray sharedSimpleArray;
 	private final int startValue;

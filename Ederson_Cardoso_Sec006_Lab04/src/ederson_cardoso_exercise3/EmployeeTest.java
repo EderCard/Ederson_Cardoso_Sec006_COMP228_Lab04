@@ -1,6 +1,7 @@
 package ederson_cardoso_exercise3;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 
@@ -24,8 +25,22 @@ public class EmployeeTest {
 
 		// print sorted list
 		System.out.printf("%n---Sorted List---");
-		list.sort(Comparator.comparing(Employee::getSalary).thenComparingDouble(Employee::getSalary));
+		// Sort employees by Salary using Comparator
+		Comparator<Employee> EmployeeSalaryComparator = new Comparator<Employee>() {
+			@Override
+			public int compare(Employee emp1, Employee emp2) {
+				return (int) (emp1.getSalary() - emp2.getSalary());
+			}
+		};
+
+		Collections.sort(list, EmployeeSalaryComparator);
 		System.out.printf("%s%n", list);
+		
+		/**
+		 *  This implementation does the same Comparator.comparing and lambda expression
+		 */
+		// list.sort(Comparator.comparing(Employee::getSalary).thenComparingDouble(Employee::getSalary));
+		// System.out.printf("%s%n", list);
 
 	} // end Main
 

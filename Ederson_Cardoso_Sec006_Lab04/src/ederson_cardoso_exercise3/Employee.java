@@ -49,5 +49,5 @@ public class Employee {
 	public String toString() {
 		return String.format("%nName: %s \t" + "Salary: $%,.2f", name, salary);
 	}
-	
+
 } // end class
